@@ -20,5 +20,9 @@ fn main() -> io::Result<()> {
     // println!("{:#?}", elfs);
     // part 1
     println!("{}", elfs.iter().max().unwrap());
+    elfs.sort_unstable();
+    let len = elfs.len();
+    let total = elfs[len - 1] + elfs[len - 2] + elfs[len - 3];
+    println!("{total}");
     Ok(())
 }
